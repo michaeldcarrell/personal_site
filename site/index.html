@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Carrell · Senior Data Engineer</title>
+  <meta name="description" content="Michael Carrell — Senior Data Engineer in Denver, CO. 7+ years building petabyte-scale data platforms with Snowflake, dbt, Airflow, Iceberg, Kafka and Terraform.">
+  <meta name="author" content="Michael Carrell">
+  <link rel="canonical" href="https://michael.carrell.us/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Michael Carrell · Senior Data Engineer">
+  <meta property="og:description" content="Senior Data Engineer building petabyte-scale data platforms. Snowflake platform lead at Rocket Companies (Redfin).">
+  <meta property="og:url" content="https://michael.carrell.us/">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#1f3a5f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michael Carrell",
+    "jobTitle": "Senior Data Engineer",
+    "email": "mailto:michael@carrell.us",
+    "url": "https://michael.carrell.us/",
+    "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO"},
+    "sameAs": ["https://www.linkedin.com/in/michaeldcarrell"],
+    "worksFor": {"@type": "Organization", "name": "Rocket Companies (Redfin)"},
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Maryville University of Saint Louis"},
+      {"@type": "CollegeOrUniversity", "name": "Eastern Washington University"}
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1a2230;
+      --muted: #5b6577;
+      --border: #e3e7ee;
+      --accent: #1f3a5f;
+      --accent-strong: #2b5c99;
+      --chip: #eef2f8;
+      --max: 960px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141b;
+        --surface: #161d27;
+        --text: #e6eaf0;
+        --muted: #9aa5b5;
+        --border: #263142;
+        --accent: #8fb4e6;
+        --accent-strong: #a9c7f0;
+        --chip: #1d2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-strong); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    nav .brand { font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+    nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
+    nav ul a { color: var(--muted); font-size: 14px; font-weight: 500; }
+    nav ul a:hover { color: var(--text); text-decoration: none; }
+
+    header.hero { padding: 88px 0 56px; }
+    .eyebrow { color: var(--accent-strong); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 12px; }
+    h1 { font-size: clamp(40px, 7vw, 64px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 16px; }
+    .lede { font-size: clamp(18px, 2.4vw, 21px); color: var(--muted); max-width: 680px; margin: 0 0 28px; }
+    .meta { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    }
+    .btn:hover { text-decoration: none; border-color: var(--accent-strong); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    @media (prefers-color-scheme: dark) { .btn.primary { color: #0f141b; } }
+    .btn svg { width: 18px; height: 18px; }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 24px; }
+    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .stat b { display: block; font-size: 30px; letter-spacing: -0.02em; color: var(--accent-strong); line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: 14px; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 28px; font-weight: 600; }
+    .about p { font-size: 18px; max-width: 760px; margin: 0; }
+
+    .job { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 0 0 36px; }
+    .job:last-child { padding-bottom: 0; }
+    .when { color: var(--muted); font-size: 14px; padding-top: 3px; }
+    .company { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+    .where { color: var(--muted); font-size: 14px; margin: 2px 0 14px; }
+    .role { margin: 0 0 18px; }
+    .role:last-child { margin-bottom: 0; }
+    .role h4 { margin: 0; font-size: 16px; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .role h4 small { color: var(--muted); font-weight: 400; font-size: 14px; }
+    .role ul { margin: 8px 0 0; padding-left: 18px; color: var(--text); }
+    .role li { margin: 4px 0; }
+    .role li::marker { color: var(--muted); }
+
+    .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .skill { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .skill h3 { margin: 0 0 12px; font-size: 15px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { background: var(--chip); color: var(--text); border-radius: 999px; padding: 4px 11px; font-size: 13px; }
+
+    .edu { display: grid; gap: 16px; }
+    .edu div { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .edu b { font-weight: 600; }
+    .edu span { color: var(--muted); }
+
+    .contact p { font-size: 18px; max-width: 640px; margin: 0 0 24px; }
+    footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
+
+    @media (max-width: 720px) {
+      nav ul { display: none; }
+      header.hero { padding: 56px 0 40px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .job { grid-template-columns: 1fr; gap: 6px; }
+      .skills { grid-template-columns: 1fr; }
+    }
+    @media print {
+      nav, .actions { display: none; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top">Michael Carrell</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top" class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Senior Data Engineer</p>
+      <h1>Michael Carrell</h1>
+      <p class="lede">I build and govern petabyte-scale data platforms — Snowflake, dbt, Airflow, Iceberg and Kafka, all managed as code.</p>
+      <div class="meta">Denver, CO · Snowflake Platform Lead at Rocket Companies (Redfin)</div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:michael@carrell.us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/michaeldcarrell" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="Michael_Carrell_Resume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Résumé (PDF)
+        </a>
+      </div>
+    </header>
+
+    <div class="stats" aria-label="Highlights">
+      <div class="stat"><b>~1 PB</b><span>Snowflake platform migrated on schedule for 30+ teams</span></div>
+      <div class="stat"><b>~100 PB</b><span>Iceberg data lake ingestion designed</span></div>
+      <div class="stat"><b>75%</b><span>Pipeline cost cut moving 100+ pipelines to Airflow</span></div>
+      <div class="stat"><b>300+</b><span>Engineers and analysts trained on the new platform</span></div>
+    </div>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>Senior Data Engineer with 7+ years building petabyte-scale data platforms across real estate, energy/GIS, retail and consulting. I lead Snowflake platform design across the Rocket family of companies, including the on-schedule migration of Redfin's ~1 PB platform to a PIFI-compliant system built in Terraform with RBAC, SSO, masking and row access policies. I also defined ingestion for a ~100 PB Iceberg data lake using Kafka and Airflow, and cut pipeline costs 75% by moving 100+ pipelines to Airflow on AWS. M.S. in Business Data Analytics.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="when">Mar 2022 – Present</div>
+        <div>
+          <h3 class="company">Rocket Companies (Redfin)</h3>
+          <div class="where">Denver, CO</div>
+          <div class="role">
+            <h4>Snowflake Platform Lead <small>Feb 2026 – Present</small></h4>
+            <ul>
+              <li>Led the on-schedule migration of Redfin's ~1 PB Snowflake platform, spanning 30+ teams, to a PIFI-compliant system with RBAC, SAML SSO, SCIM provisioning and AWS PrivateLink.</li>
+              <li>Established platform data security: dynamic data masking, row access policies and network policies.</li>
+              <li>Built the infrastructure-as-code foundation with Terraform and schemachange.</li>
+              <li>Defined ingestion and storage for a ~100 PB data lake: Apache Iceberg fed by Kafka streaming and Airflow batch.</li>
+              <li>Lead Snowflake platform design across the Rocket family of companies, serving 30+ business units; trained 300+ engineers and analysts.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <h4>Senior Data Engineer <small>Aug 2023 – Feb 2026</small></h4>
+            <ul>
+              <li>Migrated 100+ pipelines from Azure Data Factory and Databricks to Airflow on AWS, cutting cost by 75%.</li>
+              <li>Built CI/CD for dbt, taking deploys from weekly to multiple times a day.</li>
+              <li>Designed a CCPA compliance system for privacy masking across structured and unstructured data.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <h4>Data Engineer <small>Mar 2022 – Aug 2023</small></h4>
+            <ul>
+              <li>Built Python and SQL pipelines feeding Kimball models in Snowflake and dbt, integrating ad, geospatial and web-traffic data at 30M+ transactions a day.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">May 2021 – Mar 2022</div>
+        <div>
+          <h3 class="company">B3 Insight</h3>
+          <div class="where">Data Engineer · Denver, CO</div>
+          <div class="role"><ul><li>Modeled raw GIS data into the structure behind the company's analytics platform, covering 10k+ wells across 6 states.</li></ul></div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Feb 2020 – Apr 2021</div>
+        <div>
+          <h3 class="company">Blue Margin, Inc.</h3>
+          <div class="where">Data Architect (Consulting) · Fort Collins, CO</div>
+          <div class="role"><ul><li>Designed enterprise data warehouses and SSAS cube pipelines for consulting clients.</li></ul></div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jan 2019 – Feb 2020</div>
+        <div>
+          <h3 class="company">Spreetail</h3>
+          <div class="where">Data Platform Engineer · Lincoln, NE</div>
+          <div class="role"><ul><li>Turned complex transactional databases into an easy-to-use, robust data warehouse.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <h3>Warehousing &amp; Modeling</h3>
+          <div class="chips"><span class="chip">Snowflake</span><span class="chip">dbt</span><span class="chip">Apache Iceberg</span><span class="chip">Kafka</span><span class="chip">Kimball modeling</span><span class="chip">SQL Server</span><span class="chip">SSAS</span></div>
+        </div>
+        <div class="skill">
+          <h3>Orchestration &amp; Platform</h3>
+          <div class="chips"><span class="chip">Terraform</span><span class="chip">schemachange</span><span class="chip">Airflow</span><span class="chip">AWS</span><span class="chip">PrivateLink</span><span class="chip">Azure Data Factory</span><span class="chip">Databricks</span><span class="chip">CI/CD for dbt</span></div>
+        </div>
+        <div class="skill">
+          <h3>Data Governance</h3>
+          <div class="chips"><span class="chip">Snowflake RBAC</span><span class="chip">Data masking</span><span class="chip">Row access policies</span><span class="chip">SAML SSO</span><span class="chip">SCIM</span><span class="chip">PIFI</span><span class="chip">CCPA</span><span class="chip">PII masking</span></div>
+        </div>
+        <div class="skill">
+          <h3>Languages &amp; BI</h3>
+          <div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Terraform (HCL)</span><span class="chip">Power BI</span><span class="chip">Excel</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu">
+        <div><span><b>M.S., Business Data Analytics</b> (Data Modeling/Warehousing) — Maryville University of Saint Louis</span><span>2019</span></div>
+        <div><span><b>B.S., Economics</b> — Eastern Washington University</span><span>2017</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Open to conversations about data platform, data engineering and analytics engineering roles. The best way to reach me is email.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:michael@carrell.us">michael@carrell.us</a>
+        <a class="btn" href="https://www.linkedin.com/in/michaeldcarrell" target="_blank" rel="noopener">linkedin.com/in/michaeldcarrell</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="yr">2026</span> Michael Carrell · Denver, CO</div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+name: personal_site
+
+services:
+  personal_site:
+    container_name: personal_site
+    image: nginx:alpine
+    volumes:
+      # Absolute path: Portainer runs compose from its own checkout, so a
+      # relative ./site would point at an empty directory there.
+      - /home/michael/apps/personal_site/site:/usr/share/nginx/html:ro
+      - /home/michael/apps/personal_site/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - '8007:80'
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
